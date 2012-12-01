@@ -1,0 +1,61 @@
+%div.completion
+	%div.upcoming 
+		%p 
+			Coming up 
+			%strong tomorrow:
+			%h4 Try something new
+	%ul.completed
+		%p Completed themes
+		%li
+			%a{:href=>'#'}
+				%div.date 
+					Today! 
+					%br
+					&#x2713
+				%div.theme
+					%h4 
+						=data.theme.title
+					%div#improvement
+				%div.arrow >
+				%div.badges
+					=image_tag 'badge1.png'
+		%li
+			%a{:href=>'#'}
+				%div.date 
+					11/14
+					%br
+					&#x2713
+				%div.theme 
+					%h4 Mental Magic: Adding
+					%div Solved 20 puzzles
+				%div.arrow >
+				%div.badges
+					=image_tag 'badge2.png'
+		%li
+			%a{:href=>'#'}
+				%div.date 
+					11/7
+					%br
+					&#x2713
+				%div.theme
+					%h4 Success Box
+					%div Hard work pays off...
+				%div.arrow >
+				%div.badges
+					=image_tag 'badge3.png'
+		%li
+			%a{:href=>'#'}
+				%div.date 
+					10/31
+					%br
+					&#x2713
+				%div.theme
+					%h4 Info Scavenger Hunt
+					%div Found all clues!
+				%div.arrow >
+				%div.badges
+					=image_tag 'badge4.png'
+
+:javascript
+	var improvement = localStorage.getItem('improvement')
+	$('#improvement').text(improvement +'% improvement!')

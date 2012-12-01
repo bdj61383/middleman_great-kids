@@ -1,0 +1,31 @@
+%div.results
+	%h2
+		\~
+		%span#wpm
+		words per minute
+	%p 
+		That's a 
+		%span#improvement
+		improvement over your first try!
+	
+%div.next_step
+	%h2 Next Step:
+	%strong 
+		%a{:href=>'expression_email.html'} Check your email for instructions
+%div.connection
+	%p 
+		="Share " + data.theme.title + " on"
+	=image_tag "facebook_icon.png"
+
+:javascript 
+	wpm = window.location.search.substring(1)
+	$('#wpm').text(wpm)
+	var initial = localStorage.getItem('initial_wpm')
+	var improvement = (((wpm-initial)/initial)*100).toFixed(2)
+
+	if (improvement>0) {
+		$('#improvement').text(improvement +'%')
+	} 
+	else {
+		$('.results p').text("Keep up the good work and you're sure to improve!")
+	}

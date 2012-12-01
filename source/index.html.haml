@@ -1,0 +1,35 @@
+---
+title: Welcome to Middleman
+---
+
+%div.email_content
+	%h1.subject 
+		This week's theme:
+		=data.theme.title
+	/ %div.quiz
+	%p The average adult reads 200 words per minute...
+	%h2 How fast do you think the average 2nd grader reads?
+	%ul.nav.nav-tabs.nav-stacked
+		%li 
+			35-55 words per minute
+			%span >
+		%li#correct 
+			60-90 words per minute
+			%span >
+		%li 
+			90-125 words per minute
+			%span >
+		%li 
+			130-160 words per minute  
+			%span >
+
+:javascript 
+	$('li').on('click', function(){
+		if ($(this).attr('id') == 'correct') {
+
+			window.location = 'engager.html'
+		}
+		else {
+			window.location = 'engager_f.html'
+		}
+	})

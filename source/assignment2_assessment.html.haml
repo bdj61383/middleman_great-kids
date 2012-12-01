@@ -1,0 +1,50 @@
+%ul.nav.nav-tabs
+	%li
+		%a{:href=>'assignment2.html'} 
+			=data.theme.activity.tabs.intro
+	%li.active
+		%a{:href=>'#'} 
+			=data.theme.activity.tabs.assessment
+%h2.instructions
+	=data.theme.activity.assessment.text.instructions
+%div.start
+	=image_tag data.theme.activity.assessment.images.start
+	%div.btn.btn-info.btn-large#start 
+		=data.theme.activity.assessment.text.trigger_start
+%div.content.inactive
+	=data.theme.activity.content
+%div.stop.inactive 
+	=image_tag data.theme.activity.assessment.images.stop
+	%div.btn.btn-info.btn-large#stop
+		=data.theme.activity.assessment.text.trigger_stop
+
+:javascript
+	
+	var start_time, end_time;
+
+	var word_count = $.trim($('.content').text()).split(/\s+/).length;
+
+	function word_counter(){
+		$('.content')
+	}
+
+	$('#start').on('click', 
+		function () {
+			if (!$('.start').hasClass('inactive')) {
+				start_time = new Date();
+				$('.content, .stop').removeClass('inactive')
+				$('.start').addClass('inactive')
+			}
+		}
+	)
+
+	$('#stop').on('click',
+		function() {
+			if (!$('.stop').hasClass('inactive')) {
+				end_time = new Date();
+				var elapsed = Math.abs(end_time - start_time);
+				var wpm = Math.floor(word_count / (elapsed/60000))
+				window.location = "assignment2_results.html?" + wpm
+			}
+		} 
+	)

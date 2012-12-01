@@ -1,0 +1,17 @@
+%ul.nav.nav-tabs
+	%li.active
+		%a{:href=>'#'} 
+			=data.theme.activity.tabs.intro
+	%li
+		%a{:href=>'final_assessment.html'} 
+			=data.theme.activity.tabs.assessment
+%div.assignment
+	%div.more_ideas
+		%p More ideas
+		=image_tag "curly_arrow.png"
+	%h4 Put together everything you've learned. Good luck!
+	%div.clear
+%div.content
+	=data.theme.activity.content
+%div.center_button
+	%a.btn.btn-info.btn-large{:href=>'final_assessment.html'} Done

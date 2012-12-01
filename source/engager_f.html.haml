@@ -1,0 +1,19 @@
+%div.teaser_response
+	//=image_tag data.theme.engager.images.teaser_success, :class=>'teaser_img' 
+	%span 
+		=data.theme.engager.text.teaser.failure
+	%p 
+		=data.theme.engager.text.teaser.fact
+	%a.btn.btn-info.btn-large{:href=>'activity_intro.html'} 
+		=data.theme.engager.text.teaser.trigger
+%div.visualizer
+	%h2 
+		=data.theme.engager.text.visualizer.header
+	%div.media
+		/ %a.pull-left{:href=>'#'}
+		/ 	=image_tag data.theme.engager.images.visualizer, :class=>'media-object'
+		%div.video-container
+			<iframe width="105" height="79" src="http://www.youtube.com/embed/xp6lEKvh058" frameborder="0" allowfullscreen></iframe>
+		%div.media-body
+			%h4.media-heading
+			=data.theme.engager.text.visualizer.body

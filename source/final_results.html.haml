@@ -1,0 +1,37 @@
+%div.results
+	%h2
+		\~
+		%span#wpm
+		words per minute
+	%p 
+		That's a 
+		%span#improvement
+		improvement over your first try!
+	
+%div.final
+	%p 
+		Congratulations on completing 
+		=data.theme.title + "!"
+	%p#on_track Johnny's now on track, but don't stop there.  Use this strategy with whatever your child is reading at hoome every day.
+	%p Remember, practice and repetition are the keys to reading naturally.
+%div.center_button.what_next
+	%a.btn.btn-info.btn-large{:href=>'feedback.html'} What's next?  
+%div.connection
+	%p 
+		="Share " + data.theme.title + " on"
+	=image_tag "facebook_icon.png"
+
+:javascript 
+	wpm = window.location.search.substring(1)
+	$('#wpm').text(wpm)
+	var initial = localStorage.getItem('initial_wpm')
+	var improvement = (((wpm-initial)/initial)*100).toFixed(2)
+	localStorage.setItem('improvement', improvement);
+
+	if (improvement>0) {
+		$('#improvement').text(improvement +'%')
+	} 
+	else {
+		$('.results p').text("That's a change of " + improvement + "% since the start of Minute to Win It.")
+		$('#on_track').text("Johnny is sure to improve if you keep at it!  Use this strategy with whatever your child is reading at home every day.")
+	}

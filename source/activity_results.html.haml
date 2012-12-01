@@ -1,0 +1,38 @@
+%div.results
+	%p 
+		=data.theme.activity.results.text.results_leadup
+	%h2
+		\~
+		%span#wpm
+		words per minute
+	%div.feedback
+		%p Don't worry!  60-90 wpm is the goal for the end of the year.  There's still time to work on it.
+		%p There's an easy way to help your child read more fluently - and it only takes 3 minutes a day!  That's what Minute to Win It is all about!
+%div.next_step
+	%h2 Next Step:
+	%strong 
+		%a{:href=>'activity_strategy.html'} Check your email for instructions
+%div.connection
+	%p 
+		="Share " + data.theme.title + " on"
+	=image_tag "facebook_icon.png"
+
+:javascript 
+	wpm = window.location.search.substring(1)
+	$('#wpm').text(wpm)
+
+	if(typeof(Storage)!=="undefined")
+		{
+		localStorage.setItem('initial_wpm', wpm);
+		}
+	else
+		{
+		console.log("Your browser doesn't support HTML5 localStorage, so this demo app will not be able to track your progress.")
+		}
+		
+	if (wpm > 60 && wpm < 90) {
+		$('.feedback p:first-child').text("That's great!  Johnny is right on target for his age group, but there's still room to improve.")
+	} 
+	else if (wpm>90) {
+		$('.feedback p:first-child').text("Wow!  Johnny is a great reader and is ahead of the curve in reading ability.  There's always room to improve, though!")
+	}

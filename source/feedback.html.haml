@@ -1,0 +1,23 @@
+%div.feedback
+	%h2 Feedback Time!
+	%p Don't worry, we only have 2 questions to ask. 
+	%form
+		%ol
+			%li 
+				%h4 How did this week go?
+				%textarea{:placeholder=>"What did you learn this week?"}
+			%li
+				%h4 Was this week's theme helpful?
+				%input{:type=>'radio', :name=>'helpful', :checked=>true} Yes
+				%input{:type=>'radio', :name=>'helpful'} No
+		%input{:type=>'checkbox', :checked=> true} Share with your group
+		// http://developers.facebook.com/docs/reference/dialogs/feed/#graphapicall
+		=image_tag "facebook_icon.png"
+		%div.center_button
+			%a.btn.btn-info.btn-large#submit Close out the week!
+
+:javascript
+	$('#submit').on('click', function(){
+		window.location = "completion.html"
+	})
+		

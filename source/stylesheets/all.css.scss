@@ -1,0 +1,300 @@
+@charset "utf-8";
+/* This imports bootstrap styling*/
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+/* To give mobile-like padding to all direct children of body. */
+body > * {
+  padding: 5px 15px;
+}
+
+.clear {
+  padding: 0;
+  clear: both;
+}
+
+.theme_title {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+}
+
+h2 {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  line-height: 1.4 !important;
+}
+
+/* no_theme layout */
+.no_theme {
+  padding-bottom: 0;
+}
+
+/* This all applies to the 'email' layout. */
+header {
+  padding: 0;
+}
+
+.email {
+  .from, .to {
+    padding: 5px 15px;
+    border-bottom: 1px solid gray;
+    span {
+      border: 1px solid gray;
+      border-radius: 50px;
+      moz-border-radius: 50px;
+      background-color: lightgray;
+      padding: 2px;
+    }
+  }  
+}
+
+/* all emails: index, activity_strategy */
+.email_content {
+  padding: 0;
+
+  ul li {
+    cursor: pointer;
+    padding: 15px;
+    border-bottom: 1px solid gray;
+    padding-left: 30px;
+    &:first-child {
+      border-top: 1px solid gray;
+    }
+    &:hover {
+      background-color: gray;
+    }
+    span {
+      float: right;
+    }
+  }
+
+  p, h2, ol {
+    padding: 0px 30px;
+  }
+
+  p {
+    padding-top: 20px;
+  }
+
+  h2 {
+    padding-bottom: 20px;
+  }
+}
+
+.subject {
+  border-bottom: 1px solid gray;
+  padding: 20px 30px;
+  margin: 0;
+  font-size: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.center_button{
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* activity_assessment*/
+.inactive {
+  opacity: .5;
+}
+
+/* engager and engager_f*/
+.video-container {
+  width: 105px;
+  height: 79px;
+  position: relative;
+  float: left;
+    /*float: left;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;*/
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*iframe {
+  float: left;
+}*/
+
+.visualizer .media .media-body {
+  padding: 0 15px 15px 15px;
+}
+
+.media-heading {
+  margin: 0;
+}
+  
+.teaser_response {
+  padding: 30px;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    padding-top: 30px;
+  }
+  a {
+    font-size: 16px;
+  }
+}
+
+/* activity_intro */
+#line_numbers {clear:both; float: left; text-align: right}
+
+/* activity_assessment */
+.start, .stop {
+  text-align: center;
+  img {
+    padding-right: 20px;
+  }
+}
+
+.start {  
+  border-bottom: 1px solid  gray;
+  border-top: 1px solid gray;
+  padding: 20px 15px;
+}
+
+.stop {
+  padding-bottom: 20px;
+}
+
+.content {
+  padding: 20px 30px;
+}
+
+/* activity_results */
+.results {
+  padding: 10px 30px 0px 30px;
+  text-align: center;
+  .feedback {
+    text-align: left;
+  }
+}
+
+.next_step {
+  padding: 10px 15px;
+  background-color: lightgray;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.connection {
+  padding: 20px 15px;
+  text-align: center;
+  p {
+    font-style: italic;
+  }
+}
+
+/* assignment1 */
+.assignment {
+  background-color: lightgray;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+  padding: 0 0 0 15px;
+  .more_ideas {
+    text-align: center;
+    float: right;
+    width: 60px;
+    margin-left: 15px;
+    border-left: 1px solid gray;
+    p {
+      /*font-size: 12px;*/
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+/* .final */
+.final {
+  padding: 10px 30px;
+  text-align: left;
+}
+
+.what_next {
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+}
+
+/* completion */
+.completion {
+  padding: 0;
+}
+ul.completed {
+  list-style: none;
+  margin: 0;
+  p {
+    background-color: lightgray;
+    border-bottom: 1px solid gray;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 20px;
+  }
+  li {
+    clear: both;
+    border-bottom: 1px solid gray;
+    &:hover {
+      background-color: lightgray;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      .date, .theme {
+        float: left;
+        padding: 10px 0 10px 20px;
+      }
+      .date {
+        width: 40px;
+        text-align: center;
+      }
+      .theme {
+        h4 {
+          margin: 0;
+        }
+      }
+      .arrow {
+        padding: 20px;
+        float: right;
+      }
+      .badges {
+        clear: both;
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.upcoming {
+  padding: 10px 0 0 20px;
+  background-color: gray;
+  border-bottom: 1px solid rgb(170, 170, 170);
+  p {
+    margin-bottom: 0;
+  }
+  h4 {
+    margin-top: 0;
+  }
+}

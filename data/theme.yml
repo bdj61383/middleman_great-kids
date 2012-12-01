@@ -1,0 +1,47 @@
+title: Minute to Win It
+images: 
+  connections:
+    facebook: facebook_icon.png
+
+engager:
+  images:
+    teaser_success: checkmark_low.png
+    visualizer: girl_reading.jpg
+  text:
+    teaser:
+      success: That's Right!
+      failure: "Close, but not quite!"
+      fact: By the end of the year the average 2nd grader should read <b>60-90 words per minute</b>
+      trigger: See how your child stacks up!
+    visualizer:
+      header: See what this looks like
+      body: Reading at this speed they'll sound a lot like they speak - natural and expressive!
+
+activity:
+  tabs:
+    intro: Read it
+    assessment: Time it
+  content: "<p>''Ten steps from the porch and twenty steps from the rose bushes,'' growled Bluebeard in Jimmy's dream one night. ''There be treasure there! Aawrgh.''</p><p>So the next day Jimmy began to dig. He dug until the hole was deep and the dirt pile was high.</p><p>He kept digging. The hole got deeper and the dirt pile got higher.</p><p>He dug until the hole was deepest and the dirt pile was at its highest. He sighed. ''I'm too tired. I can't dig anymore.'' Then he spied something...</p><p>...but it was only one of Woofy's bones. Instead of treasure, all Jimmy had was a dog bone, a hole, and a big pile of dirt to fill it in with. He thought ''That pirate lied to me!''</p><p>But when Jimmy's mother saw what he had done, she clasped her hands and smiled a smile from here to Sunday. ''Oh, thank you, Jimmy. I always wanted a rhododendron bush planted just there. Here's $5.00 for digging that hole.''</p>"
+
+  intro:
+    images:
+    text:
+      instructions: "To get started, have your child do a practice reading of the passage.  Once they've read it through we'll do a timed read."
+      
+      trigger: Switch to timed reading
+
+  assessment:
+    images:
+      start: hourglass_start.jpg
+      stop: hourglass_stop.jpg
+    text:
+      instructions: "Let's see how fast your child can read.  Click the button when you're ready."
+      trigger_start: Start timer
+      trigger_stop: I'm done!
+
+  results:
+    images:
+    text:
+      results_leadup: "John's reading speed is:"
+      feedback: "Don't worry!  60-90 wpm is the goal for the end of the year.  There's still time to work on it.<p>There's an easy way to help your child read more fluently - and it only takes 3 minutes a day!  That's what Minute to Win It is all about!</p>"
+      

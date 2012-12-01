@@ -1,0 +1,16 @@
+%ul.nav.nav-tabs
+	%li.active
+		%a{:href=>'#'} 
+			=data.theme.activity.tabs.intro
+	%li
+		%a{:href=>'activity_assessment.html'} 
+			=data.theme.activity.tabs.assessment
+%h2.instructions
+	=data.theme.activity.intro.text.instructions
+%div#line_numbers
+%div.content#content
+	=data.theme.activity.content
+%div.center_button
+	%a.btn.btn-info.btn-large{:href=>'activity_assessment.html'} 
+		=data.theme.activity.intro.text.trigger
+
